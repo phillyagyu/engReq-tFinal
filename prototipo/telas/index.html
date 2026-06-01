@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Página inicial</title>
+        <link rel="stylesheet" type="text/css" media="all" href="./css/main.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!------------ HEADER ------------>
+        <header>
+            <!---------- 1a secao (acessibilidade e login) ---------->
+            <div class="top-top">
+                <div class="top-right">
+                    <button title="mudar o contraste" onclick="skin_alto_contraste()">contraste</button>
+                    <button title="aumentar o tamanho do texto" onclick="fonte_maior()">A+</button>
+                    <button title="diminuir o tamanho do texto" onclick="fonte_normal()">A-</button>
+                    <!---------- LOGIN AQUI ---------->
+                    <div class="login">
+                        <button onclick="drop(this.nextElementSibling)">👤 SEDEF</button>
+                        <nav style="display: none;" class="top-dropdown login-dropdown">
+                            <a href=".">LINK</a>
+                            <a href=".">LINK</a>
+                        </nav>
+                    </div>
+                    <!-- -->
+                </div>
+            </div>
+            <!---------- 2a secao (logo e busca) ---------->
+            <div class="top">
+                <div class="top-logo">
+                    <a href="./index.html">
+                        <img src="https://web.celepar.pr.gov.br/drupal/images/sejuf/logo-cedca-109x100.png">
+                    </a>
+                    <a href="./index.html">PLANO DECENAL</a>
+                </div>
+                <div class="top-busca">
+                    <button class="mobile" onclick="drop_mobile(this.nextElementSibling)">🔎</button>
+                    <div>
+                        <input>
+                        <a title="buscar" href=".">&nbsp;🔎</a>
+                    </div>
+                </div>
+            </div>
+            <!---------- 3a secao (links) ---------->
+            <div class="top-nav">
+                <button class="mobile" onclick="drop_mobile(this.nextElementSibling)">≡</button>
+                <nav>
+                    <a href="./index.html">Inicial</a>
+                    <a href=".">LINK</a>
+                    <!-- para links em dropdown -->
+                    <div>
+                        <button onclick="drop(this.nextElementSibling)">NOME ⬇️</button>
+                        <nav style="display: none;" class="top-dropdown">
+                            <a href=".">LINK</a>
+                            <a href=".">LINK</a>
+                        </nav>
+                    </div>
+                    <!-- ^ -->
+                </nav>
+            </div>
+        </header>
+        <!------------ ------------>
+        <!------------ CORPO ------------>
+        <div class="main">
+            <h1>H1: QWERTYUIOP</h1>
+            <h2>H2: QWERTYUIOP</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fermentum lorem augue, a imperdiet erat malesuada vel. Aenean nisi massa, placerat id est id, lacinia efficitur nunc. Fusce ut tellus ullamcorper, sodales lorem sit amet, sodales nisl. Etiam aliquam mi id lectus molestie ullamcorper. Aliquam viverra mi ut metus tincidunt lobortis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fermentum lorem augue, a imperdiet erat malesuada vel. Aenean nisi massa, placerat id est id, lacinia efficitur nunc. Fusce ut tellus ullamcorper, sodales lorem sit amet, sodales nisl. Etiam aliquam mi id lectus molestie ullamcorper. Aliquam viverra mi ut metus tincidunt lobortis.</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li><a href=".">LINK LINK LINK LINK LINK</a></li>
+            </ul>
+        </div>
+        <!------------ ------------>
+        <!------------ FOOTER ------------>
+        <footer>
+            <nav>
+                <button onclick="history.back()">⬅️ Voltar</button>
+                <a href="./index.html">🏠 Início</a>
+            </nav>
+        </footer>
+        <!------------ ------------>
+        <!------------ SCRIPTS (nao mexer) ------------>
+        <script src="./js/dropdown.js" defer></script>
+        <script src="./js/acessibilidade.js" defer></script>
+    </body>
+</html>
