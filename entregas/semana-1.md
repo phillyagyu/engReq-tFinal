@@ -17,6 +17,7 @@
 - O sistema também conta com recursos de acessibilidade em sua interface: alteração de esquema de cores, e tamanho de texto.
 
 ### Atores
+- Administrador
 - SEDEF
 - Conselho Estadual/Secretárias
 - Público geral

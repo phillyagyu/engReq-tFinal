@@ -18,7 +18,7 @@ A plataforma oferece funcionalidades de acompanhamento de progresso, filtros, bu
 
 ## Link do Protótipo Navegável
 Acesse o protótipo através do link:
-https://phillyagyu.github.io/engReq-tFinal/
+https://www.figma.com/design/nXVL3FNA6EY5EMgtx74eds/Prototipo_Requisitos
 
 ---
 
