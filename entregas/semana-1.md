@@ -35,9 +35,14 @@ Requisitos abrangem bem aspectos fundamentais do sistema
 ### Identificação de inconsistências
 Mas também há alguns requisitos vagos e/ou conflitantes
 - RF14: Quais medidas de segurança podem ser aplicadas?
-- RF22: Que tipos de dados podem ser alterados?
-- RF23: Detalhe técnico e não funcional
-- RNF05: Qual parâmetro para uma boa documentação?
-- RFN07: O que é um número arbitrário, grande, de dados?
+- RF23: Detalhe técnico e não funcional --> movido para RNF09
+- RFN07: O que é um número arbitrário, grande, de dados? --> escalabilidade
 - RF09 e RF15: descrevem a mesma funcionalidade.
 - RF12, RF21 e RF22: Alguns requisitos que não citam os atores, gerando dúvidas sobre quais permissões devem ser dadas a quem.
+Inconsistências com escopo:
+- RF02: na visualização hierárquica, falta Problema Público e Compromisso
+- RF21: detalhamento: dados devem ser inseridos sem necessidade de ferramenta externa.
+- necessita inserção de novos requisitos para indicar a alteração mais recente, e alterar tamanho do texto.
+Requisitos que podem ser melhorados:
+- RF11: apenas login compromete a segurança; senha aumenta a segurança
+- RF20: a existência de usuário administrador facilita a manutenção do sistema
