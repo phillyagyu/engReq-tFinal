@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Página inicial</title>
+        <link rel="stylesheet" type="text/css" media="all" href="./css/main.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/sistema.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!------------ HEADER ------------>
+        <header>
+            <!---------- 1a secao (redes sociais, acessibilidade) ---------->
+            <div class="top-top">
+                <img src="https://web.celepar.pr.gov.br/drupal/instbar/images/pr-gov-br-logo.png">
+                <div class="top-right">
+                    <button title="mudar o contraste" onclick="skin_alto_contraste()">contraste</button>
+                    <button title="aumentar o tamanho do texto" onclick="fonte_maior()">A+</button>
+                    <button title="diminuir o tamanho do texto" onclick="fonte_normal()">A-</button>
+                </div>
+            </div>
+            <!---------- 2a secao (logo e busca) ---------->
+            <div class="top">
+                <div class="top-logo">
+                    <a href="./index.html">
+                        <img src="https://web.celepar.pr.gov.br/drupal/images/sejuf/logo-cedca-109x100.png">
+                    </a>
+                    <a href="./index.html">Conselho Estadual dos Direitos da Criança e do Adolescente</a>
+                </div>
+                <div class="top-busca">
+                    <button class="mobile" onclick="drop_once(this)">🔎</button>
+                    <div>
+                        <img src="https://web.celepar.pr.gov.br/drupal/images/pia_logo_142x47.png">
+                        <input>
+                        <a title="buscar" href=".">&nbsp;🔎</a>
+                    </div>
+                </div>
+            </div>
+            <!---------- 3a secao (links) ---------->
+            <div class="top-nav">
+                <button class="mobile" onclick="drop_rev(this.nextElementSibling)">≡</button>
+                <nav>
+                    <a href="./index.html">Inicial</a>
+                    <a href=".">LINK</a>
+                    <!-- para links em dropdown -->
+                    <div>
+                        <button onclick="drop(this.nextElementSibling)">NOME ⬇️</button>
+                        <nav style="display: none;" class="top-dropdown">
+                            <a href=".">LINK</a>
+                            <a href=".">LINK</a>
+                            <a href="./sistema.html">Monitoramento do Plano Decenal da Criança e Adolescente</a>
+                        </nav>
+                    </div>
+                    <!-- ^ -->
+                </nav>
+            </div>
+        </header>
+        <!------------ ------------>
+        <!------------ CORPO ------------>
+        <div class="main">
+            <h1>Monitoramento do Plano Decenal da Criança e Adolescente</h1>
+            <!-- NUMEROS -->
+            <div class="sub">
+                <button class="boxe-emcima preench-cinza">
+                    <h3>► Acompanhe compromissos, indicadores, e evolução de ações</h3>
+                </button>
+                <div class="boxe-embaixo">
+                    <p>blank</p>
+                </div>
+            </div>
+            <!-- -->
+            <!-- INDICADORES -->
+            <div class="sub">
+                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                    <h3>► Indicadores</h3>
+                    <span class="seta">▼</span>
+                </button>
+                <div class="boxe-embaixo" style="display: none;">
+                    <p>blank</p>
+                </div>
+            </div>
+            <!-- -->
+            <!-- INDICADORES -->
+            <div class="sub">
+                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                    <h3>► blank</h3>
+                    <span class="seta">▼</span>
+                </button>
+                <div class="boxe-embaixo" style="display: none;">
+                    <p>blank</p>
+                    <!-- INDICADOR - 1 -->
+                    <div class="sub">
+                        <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                            <h3>► blank</h3>
+                            <span class="seta">▼</span>
+                        </button>
+                        <div class="boxe-embaixo" style="display: none;">
+                            <p>blank</p>
+                        </div>
+                    </div>
+                    <!-- -->
+                    <!-- INDICADOR - 2 -->
+                    <div class="sub">
+                        <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                            <h3>► blank</h3>
+                            <span class="seta">▼</span>
+                        </button>
+                        <div class="boxe-embaixo" style="display: none;">
+                            <p>blank</p>
+                            <!-- INDICADOR - 2 - 1 -->
+                            <div class="sub preench-verm">
+                                <button class="boxe-emcima" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                    <h3>► blank</h3>
+                                    <span class="seta">▼</span>
+                                </button>
+                                <div class="boxe-embaixo" style="display: none;">
+                                    <p>blank</p>
+                                </div>
+                            </div>
+                            <!-- -->
+                        </div>
+                    </div>
+                    <!-- -->
+                </div>
+            </div>
+            <!-- -->
+        </div>
+        <!------------ ------------>
+        <!------------ SCRIPTS (nao mexer) ------------>
+        <script src="./js/dropdown.js" defer></script>
+        <script src="./js/acessibilidade.js" defer></script>
+    </body>
+</html>

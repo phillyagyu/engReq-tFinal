@@ -9,21 +9,13 @@
     <body>
         <!------------ HEADER ------------>
         <header>
-            <!---------- 1a secao (acessibilidade e login) ---------->
+            <!---------- 1a secao (redes sociais, acessibilidade) ---------->
             <div class="top-top">
+                <img src="https://web.celepar.pr.gov.br/drupal/instbar/images/pr-gov-br-logo.png">
                 <div class="top-right">
                     <button title="mudar o contraste" onclick="skin_alto_contraste()">contraste</button>
                     <button title="aumentar o tamanho do texto" onclick="fonte_maior()">A+</button>
                     <button title="diminuir o tamanho do texto" onclick="fonte_normal()">A-</button>
-                    <!---------- LOGIN AQUI ---------->
-                    <div class="login">
-                        <button onclick="drop(this.nextElementSibling)">👤 SEDEF</button>
-                        <nav style="display: none;" class="top-dropdown login-dropdown">
-                            <a href=".">LINK</a>
-                            <a href=".">LINK</a>
-                        </nav>
-                    </div>
-                    <!-- -->
                 </div>
             </div>
             <!---------- 2a secao (logo e busca) ---------->
@@ -32,11 +24,12 @@
                     <a href="./index.html">
                         <img src="https://web.celepar.pr.gov.br/drupal/images/sejuf/logo-cedca-109x100.png">
                     </a>
-                    <a href="./index.html">PLANO DECENAL</a>
+                    <a href="./index.html">Conselho Estadual dos Direitos da Criança e do Adolescente</a>
                 </div>
                 <div class="top-busca">
-                    <button class="mobile" onclick="drop_mobile(this.nextElementSibling)">🔎</button>
+                    <button class="mobile" onclick="drop_once(this)">🔎</button>
                     <div>
+                        <img src="https://web.celepar.pr.gov.br/drupal/images/pia_logo_142x47.png">
                         <input>
                         <a title="buscar" href=".">&nbsp;🔎</a>
                     </div>
@@ -44,7 +37,7 @@
             </div>
             <!---------- 3a secao (links) ---------->
             <div class="top-nav">
-                <button class="mobile" onclick="drop_mobile(this.nextElementSibling)">≡</button>
+                <button class="mobile" onclick="drop_rev(this.nextElementSibling)">≡</button>
                 <nav>
                     <a href="./index.html">Inicial</a>
                     <a href=".">LINK</a>
@@ -54,6 +47,7 @@
                         <nav style="display: none;" class="top-dropdown">
                             <a href=".">LINK</a>
                             <a href=".">LINK</a>
+                            <a href="./sistema.html">Monitoramento do Plano Decenal da Criança e Adolescente</a>
                         </nav>
                     </div>
                     <!-- ^ -->

@@ -12,6 +12,7 @@
     --fonte-top: 16px;
     --fonte-padrao: 14px;
     --fonte-h1: 30px;
+    --fonte-h3: 18px;
 }
 *{
     margin: 0px;
@@ -37,6 +38,10 @@ h1{
     padding-left: 20px;
 }
 h2{ font-weight: normal;}
+h3{
+    font-size: var(--fonte-h3);
+    font-weight: normal;
+}
 
 header{ display: block;}
 header div{ box-sizing: border-box;}
@@ -47,6 +52,11 @@ header div{ box-sizing: border-box;}
     border-bottom: 1px solid var(--borda-transparente);
     width: 100%;
     height: 45px;
+}
+.top-top img{
+    position: absolute;
+    margin-left: 20px;
+    transform: translateY(50%);
 }
 .top-right{
     position: absolute;
@@ -94,6 +104,7 @@ header div{ box-sizing: border-box;}
 .top-logo{
     position: relative;
     font-size: var(--fonte-top);
+    max-width: calc(100% - 390px);
     gap: 20px;
     transform: translateY(10px);
 }
@@ -101,10 +112,12 @@ header div{ box-sizing: border-box;}
 .top-logo a:nth-child(2){
     border-left: 1px solid var(--txt-cinza);
     padding-left: 18px;
+    text-transform: uppercase;
 }
 .top-busca{
     font-size: var(--fonte-top);
     position: absolute;
+    flex-flow: column wrap;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -115,16 +128,22 @@ header div{ box-sizing: border-box;}
     text-decoration: none;
     flex-wrap: wrap;
 }
+.top-busca img{ margin-right: 20px;}
 .top-nav{
     height: 44px;
+    flex-flow: column wrap;
     background-color: var(--azul);
     border-bottom: 1px solid var(--borda-transparente);
 }
 .top-nav nav{
     display: flex;
+    flex-wrap: wrap;
     gap: 0;
 }
-.top-nav button{background-color: transparent; border: 0;}
+.top-nav button{
+    background-color: transparent;
+    border: 0;
+}
 .top-nav a, .top-nav button{
     font-size: var(--fonte-padrao);
     font-family: inherit;
@@ -164,6 +183,7 @@ header div{ box-sizing: border-box;}
     padding: 6px 10px;
     height: fit-content;
     width: 100%;
+    text-wrap: wrap;
 }
 
 .login-dropdown{
@@ -196,14 +216,17 @@ button.mobile{
 
 /* ---------- ---------- */
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 680px){
     .top-nav nav, .top-busca div, .top-logo a:nth-child(2){ display: none;}
     .mobile{ display: block !important;}
+    .top-logo{ max-width: unset;}
     .top-nav{
         align-items: baseline;
+        height: unset;
     }
     .top-nav nav{
         flex-wrap: wrap;
+        width: 100% !important;
     }
     .top-nav a, .top-nav div, .top-nav div button{
         text-align: left;
