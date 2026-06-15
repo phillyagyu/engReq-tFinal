@@ -1,8 +1,13 @@
 function drop(x){
-    if( x.style.display === "none")
+    const botao = x.previousElementSibling;
+
+    if(x.style.display === "none"){
         x.style.display = "flex";
-    else
+        botao.classList.add("active");
+    } else {
         x.style.display = "none";
+        botao.classList.remove("active");
+    }
 }
 function drop_rev(x){
     if( x.style.display === "flex")
