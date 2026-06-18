@@ -1,5 +1,7 @@
 :root{
     --cinza-escuro: #3f4e55;
+    --cinza-login:#576870;
+    --cinza-login-hover:#879398;
     --branco: #fff;
     --azul: #0072bb;
     --azul-claro: #0087de;
@@ -107,7 +109,7 @@ header div{ box-sizing: border-box;}
 
 .top-right .login-button:hover,
 .top-right .login-button.active{
-    background-color: #576870;
+    background-color: var(--cinza-login-hover);
 }
 
 .top-right .login-button span{
@@ -138,7 +140,7 @@ header div{ box-sizing: border-box;}
     text-decoration: none;
 }
 .top-right .login-dropdown a:hover{
-    background-color: #879398;
+    background-color: var(--cinza-l);
     text-decoration: none;
 }
 .top-right .login-dropdown .login-icon{
@@ -268,7 +270,7 @@ header div{ box-sizing: border-box;}
     min-width: 180px;
     height: auto;
 
-    background-color: #576870;
+    background-color: var(--cinza-login);
     border: 1px solid var(--borda-transparente);
     z-index: 10;
 }

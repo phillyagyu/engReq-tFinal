@@ -91,11 +91,10 @@
 
             <!-- Seção 2.1: resumo geral com indicadores rápidos -->
             <div class="sub">
-                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                <button class="boxe-emcima preench-cinza">
                     <h3>Acompanhe compromissos, indicadores e evolução das ações</h3>
-                    <span class="seta">▼</span>
                 </button>
-                <div class="boxe-embaixo" style="display: none;">
+                <div class="boxe-embaixo">
                     <div class="resumo-grid">
                         <div class="resumo-card">
                             <strong>XX</strong>
@@ -140,8 +139,18 @@
                 </button>
                 <div class="boxe-embaixo" style="display: none;">
                     <p>Lista de problemas públicos priorizados com situação, responsável e evolução.</p>
+                    
+                    <!-- Seção 2.3.1: filtros avançados -->
+                    <div class="sub">
+                        <button class="boxe-emcima preench-cinza">
+                            <h3>Filtros Avançados</h3>
+                        </button>
+                        <div class="boxe-embaixo">
+                            <p>Área para filtrar por período, tema, status e prioridade.</p>
+                        </div>
+                    </div>
 
-                    <!-- Seção 2.3.1: problema público 1 -->
+                    <!-- Seção 2.3.2: problema público 1 -->
                     <div class="sub">
                         <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
                             <h3>Problema público 01</h3>
@@ -152,7 +161,7 @@
                         </div>
                     </div>
 
-                    <!-- Seção 2.3.2: problema público 2 -->
+                    <!-- Seção 2.3.3: problema público 2 -->
                     <div class="sub">
                         <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
                             <h3>Problema público 02</h3>
@@ -176,29 +185,7 @@
                 </div>
             </div>
 
-            <!-- Seção 2.4: filtros avançados -->
-            <div class="sub">
-                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                    <h3>Filtros Avançados</h3>
-                    <span class="seta">▼</span>
-                </button>
-                <div class="boxe-embaixo" style="display: none;">
-                    <p>Área para filtrar por período, tema, status e prioridade.</p>
-                </div>
-            </div>
-
-            <!-- Seção 2.5: detalhamento de objetivos e tarefas -->
-            <div class="sub">
-                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                    <h3>Detalhamento de Objetivos e tarefas</h3>
-                    <span class="seta">▼</span>
-                </button>
-                <div class="boxe-embaixo" style="display: none;">
-                    <p>Lista detalhada das tarefas vinculadas a cada objetivo monitorado.</p>
-                </div>
-            </div>
-
-            <!-- Seção 2.6: últimas atualizações -->
+            <!-- Seção 2.4: últimas atualizações -->
             <div class="sub">
                 <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
                     <h3>Últimas atualizações</h3>
@@ -206,17 +193,6 @@
                 </button>
                 <div class="boxe-embaixo" style="display: none;">
                     <p>Registro das atualizações mais recentes do sistema e dos responsáveis.</p>
-                </div>
-            </div>
-
-            <!-- Seção 2.7: exportação de dados -->
-            <div class="sub">
-                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                    <h3>Exportação de dados</h3>
-                    <span class="seta">▼</span>
-                </button>
-                <div class="boxe-embaixo" style="display: none;">
-                    <p>Opções para exportar relatórios e planilhas com os dados do painel.</p>
                 </div>
             </div>
         </div>

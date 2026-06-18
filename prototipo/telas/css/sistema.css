@@ -1,6 +1,8 @@
 :root{
     --sist-borda-cinza: #ddd;
     --sist-preench-cinza: #eee;
+    --sist-borda-amarela: #e6d59b;
+    --sist-preench-amarelo: #fff4c8;
     --sist-preench-verm: #fdd;
     --sist-txt-cinza-escuro: #888;
     --sist-txt-cinza-claro: #576870;
@@ -49,9 +51,9 @@
     align-items: center;
     min-height: 86px;
     padding: 12px 10px;
-    border: 1px solid #e6d59b;
+    border: 1px solid var(--sist-borda-amarela);
     border-radius: 3px;
-    background-color: #fff4c8;
+    background-color: var(--sist-preench-amarelo);
     text-align: center;
     gap: 6px;
 }
