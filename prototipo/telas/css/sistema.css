@@ -65,8 +65,7 @@
     line-height: 1.15;
 }
 .boxe-emcima h3{
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
 }
 
 .login-container {
@@ -106,3 +105,15 @@
     max-width: calc(100% - 12px);
 }
 .sub .sub .boxe-emcima{ padding: 10px 15px;}
+
+@media screen and (max-width: 760px){
+    .main > .sub{
+        margin-left: 0;
+        margin-right: 0;
+        max-width: unset;
+    }
+    .boxe-embaixo .resumo-grid{
+        grid-template-columns: unset;
+        gap: 10px;
+    }
+}

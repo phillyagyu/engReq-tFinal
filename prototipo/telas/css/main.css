@@ -33,7 +33,7 @@ a{
 a:hover{ text-decoration: underline;}
 li{ list-style-position: inside;}
 
-h1, h2, p, li{ margin: 1rem 0;}
+h1, h2, h3, p, li{ margin: 1rem 0;}
 h1, h2{ font-size: var(--fonte-h1);}
 h1{
     border-left: 8px solid var(--azul);
@@ -338,4 +338,16 @@ button.mobile{
         text-align: left;
         width: 100%;
     }
+    .top-busca div{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .top-busca div img{
+        position: absolute;
+        right: 15px;
+        top: -50px;
+    }
+    .top-busca input{ font-size: 20px;}
+    .img-busca{ position: unset !important;}
 }

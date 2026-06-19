@@ -1,4 +1,5 @@
 var r = document.querySelector(':root');
+var b = document.getElementsByClassName("img-busca")
 var skin = false;
 
 function skin_alto_contraste() {
@@ -20,6 +21,9 @@ function skin_alto_contraste() {
         r.style.setProperty('--sist-preench-amarelo', '#000');
         r.style.setProperty('--sist-preench-verm', '#000');
         r.style.setProperty('--sist-txt-cinza-escuro', '#fff');
+        for( var i = b.length; i--;){
+            b[i].style.filter = "invert()";
+        }
     }else{
         r.style.setProperty('--cinza-escuro', '#3f4e55');
         r.style.setProperty('--cinza-login', '#576870');
@@ -38,6 +42,9 @@ function skin_alto_contraste() {
         r.style.setProperty('--sist-preench-amarelo', '#fff4c8');
         r.style.setProperty('--sist-preench-verm', '#fdd');
         r.style.setProperty('--sist-txt-cinza-escuro', '#888');
+        for( var i = b.length; i--;){
+            b[i].style.filter = "unset";
+        }
     }
     skin = !skin;
 }

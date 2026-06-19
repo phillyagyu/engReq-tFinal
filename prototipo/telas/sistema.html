@@ -38,22 +38,22 @@
             <div class="top">
                 <div class="top-logo">
                     <a href="./index.html">
-                        <img src="https://web.celepar.pr.gov.br/drupal/images/sejuf/logo-cedca-109x100.png">
+                        <img id="logo" src="https://web.celepar.pr.gov.br/drupal/images/sejuf/logo-cedca-109x100.png">
                     </a>
                     <a href="./index.html">Conselho Estadual dos Direitos da Criança e do Adolescente - Sistema de Monitoramento</a>
                 </div>
                 <div class="top-busca">
-                    <button class="mobile icon-button" onclick="drop_once(this)">
+                    <button class="mobile icon-button" onclick="drop_once(this), esconde_logo()">
                         <img class="img-busca" src="./icons/search.png" alt="busca">
                     </button>
                     <div>
-                        <img class="img-busca" src="https://web.celepar.pr.gov.br/drupal/images/pia_logo_142x47.png">
+                        <img src="https://web.celepar.pr.gov.br/drupal/images/pia_logo_142x47.png">
                         
                         
                         
                         <input type="text" placeholder="Buscar...">
                         <button class="icon-button" title="Buscar">
-                            <img src="./icons/search.png" alt="busca">
+                            <img class="img-busca" src="./icons/search.png" alt="busca">
                         </button>
                     
 
@@ -92,9 +92,9 @@
 
             <!-- Seção 2.1: resumo geral com indicadores rápidos -->
             <div class="sub">
-                <button class="boxe-emcima preench-cinza">
+                <div style="width: calc(100% - 24px);" class="boxe-emcima preench-cinza">
                     <h3>Acompanhe compromissos, indicadores e evolução das ações</h3>
-                </button>
+                </div>
                 <div class="boxe-embaixo">
                     <div class="resumo-grid">
                         <div class="resumo-card">
@@ -143,10 +143,8 @@
                     
                     <!-- Seção 2.3.1: filtros avançados -->
                     <div class="sub">
-                        <button class="boxe-emcima preench-cinza">
-                            <h3>Filtros Avançados</h3>
-                        </button>
                         <div class="boxe-embaixo">
+                            <h3>Filtros Avançados</h3>
                             <p>Área para filtrar por período, tema, status e prioridade.</p>
                         </div>
                     </div>
@@ -185,6 +183,18 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Seção 2.3: detalhamento de objetivos e tarefas -->
+            <div class="sub">
+                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                    <h3>Detalhamento de Objetivos e tarefas</h3>
+                    <span class="seta">▼</span>
+                </button>
+                <div class="boxe-embaixo" style="display: none;">
+                    <p>Lista detalhada das tarefas vinculadas a cada objetivo monitorado.</p>
+                </div>
+            </div>
+
         </div>
         <!-- Seção 3: scripts de apoio -->
         <script src="./js/dropdown.js" defer></script>

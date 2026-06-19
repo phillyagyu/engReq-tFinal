@@ -32,3 +32,6 @@ function inverte_seta(x){
     else
         x.querySelector('.seta').innerHTML = "▲"
 }
+function esconde_logo(){
+    document.getElementById("logo").style.display = "none";
+}
