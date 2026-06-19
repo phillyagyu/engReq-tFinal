@@ -1,0 +1,45 @@
+:root{
+    --sist-auth-borda: #037A74;
+    --sist-auth-preench: #BCEFED;
+}
+
+.top-logo, .boxe-auth{
+    margin: 0 auto;
+}
+
+.boxe-auth{
+    border: 1px solid var(--azul-claro);
+    border-radius: 0.5rem;
+    width: 500px;
+    max-width: 100%;
+    text-align: center;
+}
+.boxe-auth h3{ font-weight: bolder;}
+.campo:first-of-type{ margin-top: 20px;}
+.campo p{
+    margin: 10px 20px 4px;
+    text-align: left;
+}
+.campo input{
+    border: 1px solid var(--azul);
+    border-radius: 0.25rem;
+    width: calc(100% - 40px);
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 10px 5px;
+}
+#conecte{
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+    padding: 10px 25px;
+    border: 1px solid var(--sist-auth-borda);
+    border-radius: 0.5rem;
+    background-color: var(--sist-auth-preench);
+    text-align: center;
+}
+#conecte span, #conecte:hover span{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--sist-auth-borda);
+}

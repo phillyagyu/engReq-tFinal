@@ -17,6 +17,8 @@ function skin_alto_contraste() {
 
         r.style.setProperty('--sist-borda-cinza', '#fff');
         r.style.setProperty('--sist-preench-cinza', '#000');
+        r.style.setProperty('--sist-auth-borda', '#ff6');
+        r.style.setProperty('--sist-auth-preench', '#333');
         r.style.setProperty('--sist-borda-amarela', '#fff');
         r.style.setProperty('--sist-preench-amarelo', '#000');
         r.style.setProperty('--sist-preench-verm', '#000');
@@ -38,6 +40,8 @@ function skin_alto_contraste() {
 
         r.style.setProperty('--sist-borda-cinza', '#ddd');
         r.style.setProperty('--sist-preench-cinza', '#eee');
+        r.style.setProperty('--sist-auth-borda', '#037A74');
+        r.style.setProperty('--sist-auth-preench', '#BCEFED');
         r.style.setProperty('--sist-borda-amarela', '#e6d59b');
         r.style.setProperty('--sist-preench-amarelo', '#fff4c8');
         r.style.setProperty('--sist-preench-verm', '#fdd');
