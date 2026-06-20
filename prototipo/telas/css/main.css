@@ -319,6 +319,7 @@ button.mobile{
     border: none;
     background-color: transparent;
 }
+.top-right .icon-button:hover{ background-color: var(--cinza-login);}
 
 /* ---------- ---------- */
 

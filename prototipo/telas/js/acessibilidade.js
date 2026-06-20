@@ -5,7 +5,7 @@ var skin = false;
 function skin_alto_contraste() {
     if (!skin){
         r.style.setProperty('--cinza-escuro', '#000');
-        r.style.setProperty('--cinza-login', '#000');
+        r.style.setProperty('--cinza-login', '#333');
         r.style.setProperty('--cinza-login-hover', '#333');
         r.style.setProperty('--branco', '#000');
         r.style.setProperty('--azul', '#333');
@@ -16,6 +16,7 @@ function skin_alto_contraste() {
         r.style.setProperty('--borda-transparente', '#fff');
 
         r.style.setProperty('--sist-borda-cinza', '#fff');
+        r.style.setProperty('--sist-borda-cinza-2', '#ff6');
         r.style.setProperty('--sist-preench-cinza', '#000');
         r.style.setProperty('--sist-auth-borda', '#ff6');
         r.style.setProperty('--sist-auth-preench', '#333');
@@ -39,6 +40,7 @@ function skin_alto_contraste() {
         r.style.setProperty('--borda-transparente', '#0000');
 
         r.style.setProperty('--sist-borda-cinza', '#ddd');
+        r.style.setProperty('--sist-borda-cinza-2', '#ddd');
         r.style.setProperty('--sist-preench-cinza', '#eee');
         r.style.setProperty('--sist-auth-borda', '#037A74');
         r.style.setProperty('--sist-auth-preench', '#BCEFED');

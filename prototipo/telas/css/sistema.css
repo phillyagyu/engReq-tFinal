@@ -1,11 +1,16 @@
 :root{
     --sist-borda-cinza: #ddd;
+    --sist-borda-cinza-2: #ddd;
     --sist-preench-cinza: #eee;
     --sist-borda-amarela: #e6d59b;
     --sist-preench-amarelo: #fff4c8;
     --sist-preench-verm: #fdd;
     --sist-txt-cinza-escuro: #888;
     --sist-txt-cinza-claro: #576870;
+}
+button{ cursor: pointer;}
+button.boxe-emcima:hover .seta{
+    filter: brightness(0.25) invert(0.75);
 }
 .sub{
     margin: 12px 24px;
