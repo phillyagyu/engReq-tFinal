@@ -16,10 +16,10 @@ function drop_rev(x){
         x.style.display = "flex";
 }
 function drop_inline(x){
-    if( x.style.display === "inline")
+    if( x.style.display === "block")
         x.style.display = "none";
     else
-        x.style.display = "inline";
+        x.style.display = "block";
 }
 function drop_once(x){
     x.classList.remove("mobile");

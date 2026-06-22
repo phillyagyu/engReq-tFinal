@@ -4,6 +4,7 @@
         <title>Monitoramento do Plano Decenal</title>
         <link rel="stylesheet" type="text/css" media="all" href="./css/main.css">
         <link rel="stylesheet" type="text/css" media="all" href="./css/sistema.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/indicadores.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -122,13 +123,71 @@
             </div>
 
             <!-- Seção 2.2: indicadores -->
-            <div class="sub">
+            <div class="sub secao-indicadores">
                 <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
                     <h3>Indicadores</h3>
-                    <span class="seta">▼</span>
+                    <span class="seta">▲</span>
                 </button>
-                <div class="boxe-embaixo" style="display: none;">
-                    <p>Espaço reservado para filtros de indicadores, metas e acompanhamento por eixo temático.</p>
+                <div class="boxe-embaixo">
+                    <div class="sub indicador-card">
+                        <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                            <h3>Indicador 1</h3>
+                            <span class="seta">▲</span>
+                        </button>
+                        <div class="boxe-embaixo indicador-conteudo">
+                            <div class="indicador-grafico-area">
+                                <div class="grafico">
+                                    <h2 class="grafico-titulo">Taxa de evasão escolar Taxa de Evasão (%)</h2>
+                                    <div class="grafico-eixo">
+                                        <div class="grafico-linhas" aria-hidden="true">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="grafico-y" aria-hidden="true">
+                                            <span>6.0%</span>
+                                            <span>5.0%</span>
+                                            <span>4.0%</span>
+                                            <span>3.0%</span>
+                                            <span>2.0%</span>
+                                            <span>1.0%</span>
+                                            <span>0.0%</span>
+                                        </div>
+                                        <div class="grafico-barras">
+                                            <div class="barra" style="height: 86%;"><span>Janeiro</span></div>
+                                            <div class="barra" style="height: 80%;"><span>Fevereiro</span></div>
+                                            <div class="barra" style="height: 74%;"><span>Março</span></div>
+                                            <div class="barra" style="height: 68%;"><span>Abril</span></div>
+                                            <div class="barra" style="height: 61%;"><span>Maio</span></div>
+                                            <div class="barra" style="height: 57%;"><span>Junho</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="exportar-box">
+                                    <button class="exportar-botao" onclick="drop(this.nextElementSibling)">Exportar</button>
+                                    <nav class="exportar-menu" style="display: flex;">
+                                        <a href="./exportar.html">.xlsx</a>
+                                        <a href="./exportar.html">.csv</a>
+                                        <a href="./exportar.html">.pdf</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sub indicador-card">
+                        <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                            <h3>Indicador 2</h3>
+                            <span class="seta">▼</span>
+                        </button>
+                        <div class="boxe-embaixo indicador-fechado" style="display: none;">
+                            <p>Espaço reservado para um segundo indicador com seus dados e evolução temporal.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -194,7 +253,56 @@
                     <p>Lista detalhada das tarefas vinculadas a cada objetivo monitorado.</p>
                 </div>
             </div>
-
+            <!-- Seção 2.4: Últimas atualizações -->
+            <div class="sub">
+                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                    <h3>Últimas atualizações</h3>
+                    <span class="seta">▲</span>
+                </button>
+                <div class="boxe-embaixo" style="display: block; padding: 8px 0 14px;">
+                    <table style="margin: 0 auto; border-collapse: collapse; min-width: 320px; font-size: 12px; color: #333;">
+                        <thead>
+                            <tr>
+                                <th style="border: 1px solid #bfc6cc; padding: 2px 8px; font-weight: normal; text-align: left;">Usuário</th>
+                                <th style="border: 1px solid #bfc6cc; padding: 2px 8px; font-weight: normal; text-align: left;">Ação</th>
+                                <th style="border: 1px solid #bfc6cc; padding: 2px 8px; font-weight: normal; text-align: left;">Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="border: 1px solid #bfc6cc; padding: 2px 8px;">João</td>
+                                <td style="border: 1px solid #bfc6cc; padding: 2px 8px;">Editou tarefa X</td>
+                                <td style="border: 1px solid #bfc6cc; padding: 2px 8px;">01/06/2026</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #bfc6cc; padding: 2px 8px;">Maria</td>
+                                <td style="border: 1px solid #bfc6cc; padding: 2px 8px;">Criou indicador Y</td>
+                                <td style="border: 1px solid #bfc6cc; padding: 2px 8px;">31/05/2026</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #bfc6cc; padding: 2px 8px;">Carlos</td>
+                                <td style="border: 1px solid #bfc6cc; padding: 2px 8px;">Alterou status</td>
+                                <td style="border: 1px solid #bfc6cc; padding: 2px 8px;">30/05/2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Seção 2.5: Exportação de dados -->
+            <div class="sub">
+                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                    <h3>Exportação de dados</h3>
+                    <span class="seta">▼</span>
+                </button>
+                <div class="exportar-box">
+                    <button class="exportar-botao" onclick="drop(this.nextElementSibling)">Exportar</button>
+                        <nav class="exportar-menu" style="display: flex;">
+                            <a href="./exportar.html">.xlsx</a>
+                            <a href="./exportar.html">.csv</a>
+                            <a href="./exportar.html">.pdf</a>
+                        </nav>
+                </div>
+            </div>
         </div>
         <!-- Seção 3: scripts de apoio -->
         <script src="./js/dropdown.js" defer></script>
