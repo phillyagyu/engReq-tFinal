@@ -198,13 +198,13 @@ header div{ box-sizing: border-box;}
     top: 50%;
     transform: translateY(-50%);
 }
-.top-busca a{
+/* .top-busca a{
     height: 20px;
     font-size: 16px;
     text-decoration: none;
     flex-wrap: wrap;
-}
-.top-busca img{ margin-right: 20px;}
+} */
+/* .top-busca img{ margin-right: 20px;} */
 
 
 .top-nav{
@@ -339,16 +339,16 @@ button.mobile{
         text-align: left;
         width: 100%;
     }
-    .top-busca div{
+    /* .top-busca div{
         position: absolute;
         right: 10px;
         top: 10px;
-    }
-    .top-busca div img{
+    } */
+    /* .top-busca div img{
         position: absolute;
         right: 15px;
         top: -50px;
-    }
-    .top-busca input{ font-size: 20px;}
-    .img-busca{ position: unset !important;}
+    } */
+    /* .top-busca input{ font-size: 20px;} */
+    /* .img-busca{ position: unset !important;} */
 }

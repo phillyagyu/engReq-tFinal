@@ -110,6 +110,8 @@
     justify-self: center;
     align-self: center;
     width: 150px;
+    padding: 15px;
+    
 }
 
 .exportar-botao {

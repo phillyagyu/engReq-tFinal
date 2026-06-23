@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Monitoramento do Plano Decenal</title>
+        <title>Painel Administrativo</title>
         <link rel="stylesheet" type="text/css" media="all" href="./css/main.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/admin.css">
         <link rel="stylesheet" type="text/css" media="all" href="./css/sistema.css">
         <link rel="stylesheet" type="text/css" media="all" href="./css/indicadores.css">
         <meta charset="UTF-8">
@@ -43,26 +44,15 @@
                     </a>
                     <a href="./sistema.html">Conselho Estadual dos Direitos da Criança e do Adolescente - Sistema de Monitoramento</a>
                 </div>
-                <div class="top-busca">
-                    <button class="mobile icon-button" onclick="drop_once(this), esconde_logo()">
-                        <img class="img-busca" src="./icons/search.png" alt="busca">
-                    </button>
+                <div class="top-busca admin-busca">
                     <div>
-                        <img src="https://web.celepar.pr.gov.br/drupal/images/pia_logo_142x47.png">
-                        
-                        
-                        
-                        <input type="text" placeholder="Buscar...">
-                        <button class="icon-button" title="Buscar">
+                        <input type="text" placeholder="Buscar..." aria-label="Buscar no sistema">
+                        <button class="icon-button" title="Buscar" type="button">
                             <img class="img-busca" src="./icons/search.png" alt="busca">
                         </button>
-                    
-
-
                     </div>
                 </div>
             </div>
-            <!-- Seção 1.3: menu principal de navegação -->
             <div class="top-nav">
                 <button class="mobile" onclick="drop_rev(this.nextElementSibling)">≡</button>
                 <nav>
@@ -87,179 +77,258 @@
                 </nav>
             </div>
         </header>
-        <!-- Seção 2: conteúdo principal -->
-        <div class="main">
+
+        <main class="main admin-page">
             <h1>Monitoramento do Plano Decenal da Criança e Adolescente</h1>
 
-            <!-- Seção 2.1: resumo geral com indicadores rápidos -->
-            <div class="sub">
-                <div style="width: calc(100% - 24px);" class="boxe-emcima preench-cinza">
-                    <h3>Acompanhe compromissos, indicadores e evolução das ações</h3>
-                </div>
-                <div class="boxe-embaixo">
-                    <div class="resumo-grid">
-                        <div class="resumo-card">
-                            <strong>XX</strong>
-                            <span>Problemas Públicos</span>
-                        </div>
-                        <div class="resumo-card">
-                            <strong>XX</strong>
-                            <span>Compromissos</span>
-                        </div>
-                        <div class="resumo-card">
-                            <strong>XX</strong>
-                            <span>Indicadores</span>
-                        </div>
-                        <div class="resumo-card">
-                            <strong>XX</strong>
-                            <span>Tarefas em andamento</span>
-                        </div>
-                        <div class="resumo-card">
-                            <strong>XX</strong>
-                            <span>Tarefas concluídas</span>
+            <section class="admin-panel" aria-label="Resumo administrativo">
+                <details class="admin-section" open>
+                    <summary>Acompanhe compromissos, indicadores e evolução das ações</summary>
+                    <div class="admin-section-body">
+                        <div class="admin-metrics">
+                            <div class="admin-metric-card">
+                                <strong>XX</strong>
+                                <span>Problemas Públicos</span>
+                            </div>
+                            <div class="admin-metric-card">
+                                <strong>XX</strong>
+                                <span>Compromissos</span>
+                            </div>
+                            <div class="admin-metric-card">
+                                <strong>XX</strong>
+                                <span>Indicadores</span>
+                            </div>
+                            <div class="admin-metric-card">
+                                <strong>XX</strong>
+                                <span>Tarefas em andamento</span>
+                            </div>
+                            <div class="admin-metric-card">
+                                <strong>XX</strong>
+                                <span>Tarefas concluídas</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </details>
+                <!-- Seção 2.2: indicadores -->
+                <details class="admin-section">
+                    <summary>Indicadores</summary>
+                    <div class="admin-section-body">
+                        <div class="boxe-embaixo">
+                            <div class="sub indicador-card">
+                                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                    <h3>Indicador 1</h3>
+                                    <span class="seta">▲</span>
+                                </button>
+                                <div class="boxe-embaixo indicador-conteudo">
+                                    <div class="indicador-grafico-area">
+                                        <div class="grafico">
+                                            <h2 class="grafico-titulo">Taxa de evasão escolar Taxa de Evasão (%)</h2>
+                                            <div class="grafico-eixo">
+                                                <div class="grafico-linhas" aria-hidden="true">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="grafico-y" aria-hidden="true">
+                                                    <span>6.0%</span>
+                                                    <span>5.0%</span>
+                                                    <span>4.0%</span>
+                                                    <span>3.0%</span>
+                                                    <span>2.0%</span>
+                                                    <span>1.0%</span>
+                                                    <span>0.0%</span>
+                                                </div>
+                                                <div class="grafico-barras">
+                                                    <div class="barra" style="height: 86%;"><span>Janeiro</span></div>
+                                                    <div class="barra" style="height: 80%;"><span>Fevereiro</span></div>
+                                                    <div class="barra" style="height: 74%;"><span>Março</span></div>
+                                                    <div class="barra" style="height: 68%;"><span>Abril</span></div>
+                                                    <div class="barra" style="height: 61%;"><span>Maio</span></div>
+                                                    <div class="barra" style="height: 57%;"><span>Junho</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-            <!-- Seção 2.2: indicadores -->
-            <div class="sub secao-indicadores">
-                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                    <h3>Indicadores</h3>
-                    <span class="seta">▲</span>
-                </button>
-                <div class="boxe-embaixo">
-                    <div class="sub indicador-card">
-                        <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                            <h3>Indicador 1</h3>
-                            <span class="seta">▲</span>
-                        </button>
-                        <div class="boxe-embaixo indicador-conteudo">
-                            <div class="indicador-grafico-area">
-                                <div class="grafico">
-                                    <h2 class="grafico-titulo">Taxa de evasão escolar Taxa de Evasão (%)</h2>
-                                    <div class="grafico-eixo">
-                                        <div class="grafico-linhas" aria-hidden="true">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="grafico-y" aria-hidden="true">
-                                            <span>6.0%</span>
-                                            <span>5.0%</span>
-                                            <span>4.0%</span>
-                                            <span>3.0%</span>
-                                            <span>2.0%</span>
-                                            <span>1.0%</span>
-                                            <span>0.0%</span>
-                                        </div>
-                                        <div class="grafico-barras">
-                                            <div class="barra" style="height: 86%;"><span>Janeiro</span></div>
-                                            <div class="barra" style="height: 80%;"><span>Fevereiro</span></div>
-                                            <div class="barra" style="height: 74%;"><span>Março</span></div>
-                                            <div class="barra" style="height: 68%;"><span>Abril</span></div>
-                                            <div class="barra" style="height: 61%;"><span>Maio</span></div>
-                                            <div class="barra" style="height: 57%;"><span>Junho</span></div>
+                                        <div class="exportar-box">
+                                            <button class="exportar-botao" onclick="drop(this.nextElementSibling)">Exportar</button>
+                                            <nav class="exportar-menu" style="display: none;">
+                                                <a href="./exportar.html">.xlsx</a>
+                                                <a href="./exportar.html">.csv</a>
+                                                <a href="./exportar.html">.pdf</a>
+                                            </nav>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div class="exportar-box">
-                                    <button class="exportar-botao" onclick="drop(this.nextElementSibling)">Exportar</button>
-                                    <nav class="exportar-menu" style="display: flex;">
-                                        <a href="./exportar.html">.xlsx</a>
-                                        <a href="./exportar.html">.csv</a>
-                                        <a href="./exportar.html">.pdf</a>
-                                    </nav>
+                            <div class="sub indicador-card">
+                                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                    <h3>Indicador 2</h3>
+                                    <span class="seta">▼</span>
+                                </button>
+                                <div class="boxe-embaixo indicador-fechado" style="display: none;">
+                                    <p>Espaço reservado para um segundo indicador com seus dados e evolução temporal.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </details>
 
-                    <div class="sub indicador-card">
-                        <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                            <h3>Indicador 2</h3>
-                            <span class="seta">▼</span>
-                        </button>
-                        <div class="boxe-embaixo indicador-fechado" style="display: none;">
-                            <p>Espaço reservado para um segundo indicador com seus dados e evolução temporal.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Seção 2.3: lista de problemas públicos -->
-            <div class="sub">
-                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                    <h3>Lista de Problemas Públicos</h3>
-                    <span class="seta">▼</span>
-                </button>
-                <div class="boxe-embaixo" style="display: none;">
-                    <p>Lista de problemas públicos priorizados com situação, responsável e evolução.</p>
-                    
-                    <!-- Seção 2.3.1: filtros avançados -->
-                    <div class="sub">
-                        <div class="boxe-embaixo">
-                            <h3>Filtros Avançados</h3>
-                            <p>Área para filtrar por período, tema, status e prioridade.</p>
-                        </div>
-                    </div>
-
-                    <!-- Seção 2.3.2: problema público 1 -->
+                <!-- Seção 2.3: lista de problemas públicos -->
+                <details class="admin-section">
+                    <summary>Lista de Problemas Públicos</summary>
                     <div class="sub">
                         <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                            <h3>Problema público 01</h3>
+                            <h3>Lista de Problemas Públicos</h3>
                             <span class="seta">▼</span>
                         </button>
                         <div class="boxe-embaixo" style="display: none;">
-                            <p>Detalhamento do problema, objetivos vinculados e tarefas associadas.</p>
-                        </div>
-                    </div>
+                            <p>Lista de problemas públicos priorizados com situação, responsável e evolução.</p>
+                            
+                            <!-- Seção 2.3.1: filtros avançados -->
+                            <div class="sub">
+                                <div class="boxe-embaixo">
+                                    <h3>Filtros Avançados</h3>
+                                        <div class="accordion-body filtros-body">
+                                            <!-- Linha de selects -->
+                                            <div class="filtros-row">
+                                                <select class="filtro-select">
+                                                    <option>Problema</option>
+                                                </select>
+                                                <select class="filtro-select">
+                                                    <option>Compromisso</option>
+                                                </select>
+                                                <select class="filtro-select">
+                                                    <option>Responsável</option>
+                                                </select>
+                                                <select class="filtro-select">
+                                                    <option>Status</option>
+                                                </select>
+                                                <select class="filtro-select">
+                                                    <option>Ano</option>
+                                                </select>
+                                                <button class="filtro-btn-limpar">Limpar</button>
+                                            </div>
+                                            <!-- Tags de filtros ativos -->
+                                            <div class="filtros-tags">
+                                                <span class="filtro-tag">Filtro 1 <button class="tag-remover">×</button></span>
+                                                <span class="filtro-tag">Filtro 2 <button class="tag-remover">×</button></span>
+                                            </div>
+                                            <!-- Área de resultados (espaço reservado) -->
+                                            <div class="sub">
+                                                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                                    <h3>Problema público 00</h3>
+                                                    <span class="seta">▼</span>
+                                                </button>
+                                                <div class="boxe-embaixo" style="display: none;">
+                                                    <p>Detalhamento do problema, objetivos vinculados e tarefas associadas.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
 
-                    <!-- Seção 2.3.3: problema público 2 -->
-                    <div class="sub">
-                        <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                            <h3>Problema público 02</h3>
-                            <span class="seta">▼</span>
-                        </button>
-                        <div class="boxe-embaixo" style="display: none;">
-                            <p>Resumo das metas e dos desdobramentos em andamento.</p>
-
-                            <!-- Seção 2.3.2.1: desdobramento do problema 02 -->
-                            <div class="sub preench-verm">
-                                <button class="boxe-emcima" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                                    <h3>Subitem 02.1</h3>
+                            <!-- Seção 2.3.2: problema público 1 -->
+                            <div class="sub">
+                                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                    <h3>Problema público 01</h3>
                                     <span class="seta">▼</span>
                                 </button>
                                 <div class="boxe-embaixo" style="display: none;">
-                                    <p>Detalhes do subitem com status e próximos passos.</p>
+                                    <p>Detalhamento do problema, objetivos vinculados e tarefas associadas.</p>
+                                </div>
+                            </div>
+
+                            <!-- Seção 2.3.3: problema público 2 -->
+                            <div class="sub">
+                                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                    <h3>Problema público 02</h3>
+                                    <span class="seta">▼</span>
+                                </button>
+                                <div class="boxe-embaixo" style="display: none;">
+                                    <p>Resumo das metas e dos desdobramentos em andamento.</p>
+
+                                    <!-- Seção 2.3.2.1: desdobramento do problema 02 -->
+                                    <div class="sub preench-verm">
+                                        <button class="boxe-emcima" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                            <h3>Subitem 02.1</h3>
+                                            <span class="seta">▼</span>
+                                        </button>
+                                        <div class="boxe-embaixo" style="display: none;">
+                                            <p>Detalhes do subitem com status e próximos passos.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </details>
 
-            <!-- Seção 2.3: detalhamento de objetivos e tarefas -->
-            <div class="sub">
-                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                    <h3>Detalhamento de Objetivos e tarefas</h3>
-                    <span class="seta">▼</span>
-                </button>
-                <div class="boxe-embaixo" style="display: none;">
-                    <p>Lista detalhada das tarefas vinculadas a cada objetivo monitorado.</p>
-                </div>
-            </div>
-            <!-- Seção 2.4: Últimas atualizações -->
-            <div class="sub">
-                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                    <h3>Últimas atualizações</h3>
-                    <span class="seta">▲</span>
-                </button>
-                <div class="boxe-embaixo" style="display: block; padding: 8px 0 14px;">
+                <!-- Seção 2.3: detalhamento de objetivos e tarefas -->
+                <details class="admin-section">
+                    <summary>Detalhamento de Objetivos e tarefas</summary>
+                    <div class="admin-section-body">
+                        <div class="sub">
+                            <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                <h3>Problema público 01</h3>
+                                <span class="seta">▼</span>
+                            </button>
+                            <div class="boxe-embaixo" style="display: none;">
+                                <div class="sub">
+                                    <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                        <h3>Compromisso 01</h3>
+                                        <span class="seta">▼</span>
+                                    </button>
+                                    <div class="boxe-embaixo" style="display: none;">
+                                        <div class="sub">
+                                            <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                                <h3>Objetivo 01</h3>
+                                                <span class="seta">▼</span>
+                                            </button>
+                                            <div class="boxe-embaixo" style="display: none;">
+                                                <p>Detalhamento do problema, objetivos vinculados e tarefas associadas.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub">
+                            <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                <h3>Problema público 02</h3>
+                                <span class="seta">▼</span>
+                            </button>
+                            <div class="boxe-embaixo" style="display: none;">
+                                <div class="sub">
+                                    <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                        <h3>Compromisso 02</h3>
+                                        <span class="seta">▼</span>
+                                    </button>
+                                    <div class="boxe-embaixo" style="display: none;">
+                                        <div class="sub">
+                                            <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                                                <h3>Objetivo 02</h3>
+                                                <span class="seta">▼</span>
+                                            </button>
+                                            <div class="boxe-embaixo" style="display: none;">
+                                                <p>Detalhamento do problema, objetivos vinculados e tarefas associadas.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </details>
+
+                <details class="admin-section">
+                    <summary>Últimas atualizações</summary>
+                    <div class="admin-section-body">
+                        <div class="boxe-embaixo" style="display: block; padding: 8px 0 14px;">
                     <table style="margin: 0 auto; border-collapse: collapse; min-width: 320px; font-size: 12px; color: #333;">
                         <thead>
                             <tr>
@@ -287,24 +356,25 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <!-- Seção 2.5: Exportação de dados -->
-            <div class="sub">
-                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
-                    <h3>Exportação de dados</h3>
-                    <span class="seta">▼</span>
-                </button>
-                <div class="exportar-box">
-                    <button class="exportar-botao" onclick="drop(this.nextElementSibling)">Exportar</button>
-                        <nav class="exportar-menu" style="display: flex;">
-                            <a href="./exportar.html">.xlsx</a>
-                            <a href="./exportar.html">.csv</a>
-                            <a href="./exportar.html">.pdf</a>
-                        </nav>
-                </div>
-            </div>
-        </div>
-        <!-- Seção 3: scripts de apoio -->
+                    </div>
+                </details>
+
+
+                <details class="admin-section">
+                    <summary>Exportação de Dados</summary>
+                    <div class="exportar-box">
+                        <button class="exportar-botao" onclick="drop(this.nextElementSibling)">Exportar</button>
+                            <nav class="exportar-menu" style="display: none;">
+                                <a href="./exportar.html">.xlsx</a>
+                                <a href="./exportar.html">.csv</a>
+                                <a href="./exportar.html">.pdf</a>
+                            </nav>
+                    </div>
+                </details>
+
+                
+            </section>
+        </main>
         <script src="./js/dropdown.js" defer></script>
         <script src="./js/acessibilidade.js" defer></script>
     </body>
