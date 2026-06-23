@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Painel Administrativo</title>
+        <link rel="stylesheet" type="text/css" media="all" href="./css/main.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/admin.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Seção 1: cabeçalho superior com acessibilidade e login -->
+        <header>
+            <!-- Seção 1.1: barra institucional -->
+            <div class="top-top">
+                <img src="https://web.celepar.pr.gov.br/drupal/instbar/images/pr-gov-br-logo.png">
+                <div class="top-right">
+                    <button class="icon-button" title="mudar o contraste" onclick="skin_alto_contraste()">
+                        <img src="./icons/contrast-symbol.png" alt="contraste">
+                    </button>
+                    <button class="icon-button" title="aumentar o tamanho do texto" onclick="fonte_maior()">
+                        <img src="./icons/resize-font +.png" alt="A+">
+                    </button>
+                    <button class="icon-button" title="diminuir o tamanho do texto" onclick="fonte_normal()">
+                        <img src="./icons/resize-font -.png" alt="A-">
+                    </button>
+                    <div>
+                        <button class="icon-button login-button" title="abrir opções de login" onclick="drop(this.nextElementSibling)">
+                            <img src="./icons/user 1.png" alt="login">
+                            <span>User</span>
+                        </button>
+                        <nav style="display: none;" class="top-dropdown login-dropdown">
+                            <a href="./login.html"><span>Realizar logout</span></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- Seção 1.2: identidade visual e busca -->
+            <div class="top">
+                <div class="top-logo">
+                    <a href="./sistema.html">
+                        <img id="logo" src="https://web.celepar.pr.gov.br/drupal/images/sejuf/logo-cedca-109x100.png">
+                    </a>
+                    <a href="./sistema.html">Conselho Estadual dos Direitos da Criança e do Adolescente - Sistema de Monitoramento</a>
+                </div>
+                <div class="top-busca admin-busca">
+                    <div>
+                        <input type="text" placeholder="Buscar..." aria-label="Buscar no sistema">
+                        <button class="icon-button" title="Buscar" type="button">
+                            <img class="img-busca" src="./icons/search.png" alt="busca">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="top-nav">
+                <nav>
+                    <a href="./sistema.html">Início</a>
+                    <a href=".">Indicadores</a>
+                    <a href=".">Problemas</a>
+                    <a href=".">Filtros</a>
+                    <a href=".">Atualizações</a>
+                    <a href=".">Exportar</a>
+                    <!-- Seção 1.3.1: menu suspenso de apoio -->
+                    <div>
+                        <button onclick="drop(this.nextElementSibling)">Mais opções ⬇️</button>
+                        <nav style="display: none;" class="top-dropdown">
+                            <a href=".">Visão geral</a>
+                            <a href=".">Regras de negócio</a>
+                            <a href="./sistema.html">
+                                Monitoramento do Plano Decenal<br>
+                                da Criança e Adolescente
+                            </a>
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="main admin-page">
+            <h1>Painel Administrativo</h1>
+
+            <section class="admin-panel" aria-label="Resumo administrativo">
+                <details class="admin-section" open>
+                    <summary>Overview</summary>
+                    <div class="admin-section-body">
+                        <div class="admin-metrics">
+                            <article class="admin-metric-card">
+                                <strong>XX</strong>
+                                <span>Acessos</span>
+                            </article>
+                            <article class="admin-metric-card">
+                                <strong>XX</strong>
+                                <span>Usuários ativos</span>
+                            </article>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="admin-section">
+                    <summary>Gerenciamento de Usuários</summary>
+                    <div class="admin-section-body">
+                        <p>Área reservada para criação, edição, bloqueio e auditoria de usuários do sistema.</p>
+                    </div>
+                </details>
+
+                <details class="admin-section">
+                    <summary>Gerenciamento de Dados do Sistema</summary>
+                    <div class="admin-section-body">
+                        <p>Espaço para manutenção de cadastros, parâmetros e tabelas de apoio do sistema.</p>
+                    </div>
+                </details>
+
+                <details class="admin-section">
+                    <summary>Importação de Dados</summary>
+                    <div class="admin-section-body">
+                        <p>Área destinada ao envio e processamento de arquivos para carga de informações.</p>
+                    </div>
+                </details>
+
+                <details class="admin-section">
+                    <summary>Exportação de Dados</summary>
+                    <div class="admin-section-body">
+                        <p>Área reservada para extração de relatórios, tabelas e bases consolidadas.</p>
+                    </div>
+                </details>
+
+                <details class="admin-section">
+                    <summary>Configurações do Sistema</summary>
+                    <div class="admin-section-body">
+                        <p>Configurações gerais, permissões, integrações e preferências administrativas.</p>
+                    </div>
+                </details>
+            </section>
+        </main>
+        <script src="./js/dropdown.js" defer></script>
+        <script src="./js/acessibilidade.js" defer></script>
+    </body>
+</html>
