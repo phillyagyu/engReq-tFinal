@@ -5,6 +5,41 @@
 - Critérios de aceitação 
 - Backlog inicial
 
+### Histórias de Usuário
+#### Estrutura de Dados e Hierarquia
+- US01 – Visualizar Problemas Públicos e Vínculos: Como cidadão interessado, quero visualizar os problemas públicos cadastrados e seus respectivos Compromissos Decenais
+para que eu possa acompanhar as ações relacionadas aos direitos da criança e do adolescente com a garantia de que cada problema está devidamente categorizado. (Requisitos: RF01, Regra de Negócio Relacionada: RN01)
+- US02 – Navegar pela Estrutura Hierárquica do Plano: Como público geral, quero poder acompanhar a concretização de tarefas, para ver se estão sendo cumpridas. (Requisitos: RF02, Regra de Negócio Relacionada: RN02)
+- US12 – Consultar Responsáveis pelas Ações: Como usuário do sistema, quero visualizar o responsável principal e os colaboradores associados a cada ação cadastrada para que eu saiba exatamente qual órgão ou indivíduo responde centralmente por aquela entrega.(Requisitos: RF19, Regra de Negócio Relacionada: RN03)
+
+#### Monitoramento, Cálculo e Estados
+- US03 – Monitorar Tarefas e Indicadores: Como gestor de acompanhamento, quero visualizar o progresso e o status das tarefas e indicadores para que eu acompanhe a execução das ações planejadas.(Requisitos: RF03, Regra de Negócio Relacionada: RN04)
+- US09 – Visualizar Gráficos de Evolução dos Indicadores: Como usuário do sistema quero visualizar gráficos de linha ou barras com a evolução histórica dos indicadores de desempenho para que eu compreenda visualmente se os resultados estão melhorando ou piorando. (Requisitos: RF16)
+- US10 – Filtrar Gráficos por Ano: Como usuário do sistema quero selecionar um ano específico para recalcular e renderizar os gráficos dos indicadores para que eu possa isolar e comparar o desempenho da gestão entre diferentes períodos anuais.(Requisitos: RF17, Regra de Negócio Relacionada: RN05)
+- US11 – Identificação Visual por Tipo de Indicador: Como usuário do sistema quero que os indicadores possuam cores, tags ou ícones distintos baseados em sua tipologia para que eu identifique rapidamente se o dado que estou olhando é de processo, de resultado ou de impacto. (Requisitos: RF18, Regra de Negócio Relacionada: RN06)
+
+#### Controle de Acesso e Permissão
+- US14 – Utilizar Diferentes Perfis de Usuário: Como administrador do sistema quero que o sistema valide os níveis de permissão adequados para Administradores (SEDEF), Usuários Operacionais (Secretarias/Conselhos) e Visitantes (Público Geral) para que cada perfil acesse estritamente o escopo de funcionalidades de seu papel. (Requisitos: RF20, Regra de Negócio Relacionada: RN07)
+- US15 – Gerenciar Permissões de Usuários: Como administrador da SEDEF quero elevar, reduzir ou revogar permissões de acesso dos usuários por meio de um painel autônomo para que eu possa controlar de forma centralizada quem pode editar as informações do sistema. (Requisitos: RF09 e RF15, Regra de Negócio Relacionada: RN08)
+- US13 – Realizar Autenticação (Login): Como usuário operador do sistema (Secretária / SEDEF) 1uero realizar login seguro utilizando minhas credenciais de acesso para que minhas ações de escrita e edição sejam validadas e permitidas pela plataforma. (Requisitos: RF11, Regra de Negócio Relacionada: RN09)
+
+#### Segurança, Auditoria e Logs
+- US19 – Registrar Auditoria das Alterações (Logs): Como administrador do sistema quero que o sistema grave de forma imutável o rastro de auditoria de qualquer inserção, edição ou exclusão (quem fez, quando fez, valor antigo e valor novo) para que possíveis erros de alimentação ou sabotagens possam ser rastreados e auditados. (Requisitos: RF13, Regra de Negócio Relacionada: RN10)
+- US07 – Consultar Histórico de Atualizações de uma Tarefa: Como gestor ou cidadão interessado quero visualizar uma linha do tempo cronológica com o histórico de evolução e notas de progresso inseridas em uma tarefa para que eu possa auditar os passos dados até a sua conclusão sem que dados antigos sejam apagados. (Requisitos: RF08, Regra de Negócio Relacionada: RN11)
+- US06 – Visualizar Timestamp da Última Atualização: Como usuário do sistema quero visualizar a data e a hora exata da última modificação dos dados na tela que estou consultando para que eu tenha certeza do nível de frescor e atualidade daquela informação. (Requisitos: RF07, Regra de Negócio Relacionada: RN12)
+- US21 – Proteger Sessões com Tokens Seguros: Como usuário autenticado quero que minhas requisições trafeguem utilizando um token de autenticação JWT assinado para que atacantes externos não interceptem minhas credenciais ou forjem ações em meu nome. (Requisitos: RF14, RF23 e RNF08, Regra de Negócio Relacionada: RN13)
+
+#### Entrada e Saída de Dados (Filtros, Carga e Exportação)
+Regras para manipulação de arquivos e dados em massa.
+- US18 – Importar Dados em Massa por Planilhas: Como usuário autorizado das Secretarias quero carregar uma planilha Excel ou CSV contendo uma estrutura de dados e ter o sistema validando a integridade das linhas antes de salvar para que eu consiga cadastrar grandes volumes de tarefas simultaneamente de forma rápida e segura. (Derivado de: RF21 e RN14).
+- US16 – Cadastrar e Alterar Informações via Interface: Como usuário autorizado (Secretária / SEDEF) quero cadastrar ou editar problemas, compromissos, objetivos, linhas de ação, tarefas e indicadores diretamente por formulários na interface gráfica para que eu faça ajustes pontuais e rápidos nos registros sob minha responsabilidade. (Derivado de: RF12 e RF22).
+- US04 – Pesquisar Informações do Plano: Como usuário do sistema quero realizar buscas textuais por palavras-chave, responsáveis, compromissos e eixos do plano para que eu localize rapidamente o item que desejo auditar ou acompanhar. (Derivado de: RNF04).
+- US05 – Filtrar Dados Painel: Como usuário do sistema quero refinar as tabelas e listagens aplicando múltiplos filtros simultâneos (Status, Ano, Órgão) para que eu isole apenas o subconjunto de dados do meu interesse direto. (Derivado de: RNF04).
+- US08 – Exportar Dados Filtrados: Como usuário do sistema quero exportar a visualização corrente do meu painel nos formatos Excel, CSV ou PDF para que o arquivo gerado venha exatamente com os mesmos filtros aplicados em tela e eu possa usá-lo em relatórios externos. (Derivado de: RNF06 e RN15).
+
+#### Acessibilidade e Experiência do Usuário
+- US20 – Utilizar Recursos de Acessibilidade (Alto Contraste e Texto Grande): Como usuário com deficiência visual ou dificuldades de leitura quero acionar o modo de alto contraste e redimensionamento de texto na interface do sistema para que eu consiga ler as informações com clareza e de forma confortável. (Derivado de: RF10 e RNF01).
+
 ### Regras de Negócio
 #### Estrutura de Dados e Hierarquia
 Essas regras garantem a consistência e a integridade da árvore de informações do sistema.
