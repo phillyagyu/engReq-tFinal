@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Monitoramento do Plano Decenal</title>
+        <link rel="stylesheet" type="text/css" media="all" href="./css/main.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/sistema.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/login.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Seção 1: cabeçalho superior com acessibilidade e login -->
+        <header>
+            <!-- Seção 1.1: barra institucional -->
+            <div class="top-top">
+                <img src="https://web.celepar.pr.gov.br/drupal/instbar/images/pr-gov-br-logo.png">
+                <div class="top-right">
+                    <button class="icon-button" title="mudar o contraste" onclick="skin_alto_contraste()">
+                        <img src="./icons/contrast-symbol.png" alt="contraste">
+                    </button>
+                    <button class="icon-button" title="aumentar o tamanho do texto" onclick="fonte_maior()">
+                        <img src="./icons/resize-font +.png" alt="A+">
+                    </button>
+                    <button class="icon-button" title="diminuir o tamanho do texto" onclick="fonte_normal()">
+                        <img src="./icons/resize-font -.png" alt="A-">
+                    </button>
+                    <div>
+                        <button class="icon-button login-button" title="abrir opções de login" onclick="drop(this.nextElementSibling)">
+                            <img src="./icons/user 1.png" alt="login">
+                            <span>Login</span>
+                        </button>
+                        <nav style="display: none;" class="top-dropdown login-dropdown">
+                            <a href="."><span>Realizar login</span></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- Seção 1.2: identidade visual e busca -->
+            <div class="top">
+                <div class="top-logo">
+                    <a href="./sistema.html">
+                        <img id="logo" src="https://web.celepar.pr.gov.br/drupal/images/sejuf/logo-cedca-109x100.png">
+                    </a>
+                    <a href="./sistema.html">Conselho Estadual dos Direitos da Criança e do Adolescente - Sistema de Monitoramento</a>
+                </div>
+            </div>
+        </header>
+        <!-- Seção 2: conteúdo principal -->
+        <div class="main">
+            <div class="boxe-auth">
+                <h3>Seja bem-vinda(o)!</h3>
+
+                <div class="campo">
+                    <p>Usuário</p>
+                    <input type="text" placeholder="Digite seu usuário">
+                </div>
+                <div class="campo">
+                    <p>Senha</p>
+                    <input type="text" placeholder="Digite sua senha">
+                </div>
+
+                <a id="conecte" href="./admin.html">
+                    <div>
+                        <span>Conecte-se</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Seção 3: scripts de apoio -->
+        <script src="./js/dropdown.js" defer></script>
+        <script src="./js/acessibilidade.js" defer></script>
+    </body>
+</html>

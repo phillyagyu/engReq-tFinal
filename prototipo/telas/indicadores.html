@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Indicadores</title>
+        <link rel="stylesheet" type="text/css" media="all" href="./css/main.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/sistema.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/indicadores.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="top-top">
+                <img src="https://web.celepar.pr.gov.br/drupal/instbar/images/pr-gov-br-logo.png">
+                <div class="top-right">
+                    <button class="icon-button" title="mudar o contraste" onclick="skin_alto_contraste()">
+                        <img src="./icons/contrast-symbol.png" alt="contraste">
+                    </button>
+                    <button class="icon-button" title="aumentar o tamanho do texto" onclick="fonte_maior()">
+                        <img src="./icons/resize-font +.png" alt="A+">
+                    </button>
+                    <button class="icon-button" title="diminuir o tamanho do texto" onclick="fonte_normal()">
+                        <img src="./icons/resize-font -.png" alt="A-">
+                    </button>
+                    <div>
+                        <button class="icon-button login-button" title="abrir opções de login" onclick="drop(this.nextElementSibling)">
+                            <img src="./icons/user 1.png" alt="login">
+                            <span>Login</span>
+                        </button>
+                        <nav style="display: none;" class="top-dropdown login-dropdown">
+                            <a href="./login.html"><span>Realizar login</span></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="top">
+                <div class="top-logo">
+                    <a href="./sistema.html">
+                        <img id="logo" src="https://web.celepar.pr.gov.br/drupal/images/sejuf/logo-cedca-109x100.png">
+                    </a>
+                    <a href="./sistema.html">Conselho Estadual dos Direitos da Criança e do Adolescente - Sistema de Monitoramento</a>
+                </div>
+                <div class="top-busca">
+                    <button class="mobile icon-button" onclick="drop_once(this), esconde_logo()">
+                        <img class="img-busca" src="./icons/search.png" alt="busca">
+                    </button>
+                    <div>
+                        <img src="https://web.celepar.pr.gov.br/drupal/images/pia_logo_142x47.png">
+                        <input type="text" placeholder="Buscar...">
+                        <button class="icon-button" title="Buscar">
+                            <img class="img-busca" src="./icons/search.png" alt="busca">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="top-nav">
+                <button class="mobile" onclick="drop_rev(this.nextElementSibling)">≡</button>
+                <nav>
+                    <a href="./index.html">Início</a>
+                    <a href="./indicadores.html" aria-current="page">Indicadores</a>
+                    <a href="./problemas.html">Problemas</a>
+                    <a href="./sistema.html">Filtros</a>
+                    <a href="./atualizacoes.html">Atualizações</a>
+                    <a href="./exportar.html">Exportar</a>
+                    <div>
+                        <button onclick="drop(this.nextElementSibling)">Mais opções ⬇️</button>
+                        <nav style="display: none;" class="top-dropdown">
+                            <a href="./visao-geral.html">Visão geral</a>
+                            <a href="./regras-negocio.html">Regras de negócio</a>
+                            <a href="./sistema.html">
+                                Monitoramento do Plano Decenal<br>
+                                da Criança e Adolescente
+                            </a>
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="main indicadores-page">
+            <h1>Indicadores</h1>
+
+            <div class="sub">
+                <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                    <h3>Indicadores</h3>
+                    <span class="seta">▲</span>
+                </button>
+                <div class="boxe-embaixo">
+                    <div class="sub indicador-card">
+                        <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                            <h3>Indicador 1</h3>
+                            <span class="seta">▲</span>
+                        </button>
+                        <div class="boxe-embaixo indicador-conteudo">
+                            <div class="indicador-grafico-area">
+                                <div class="grafico">
+                                    <h2 class="grafico-titulo">Taxa de evasão escolar Taxa de Evasão (%)</h2>
+                                    <div class="grafico-eixo">
+                                        <div class="grafico-linhas" aria-hidden="true">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="grafico-y" aria-hidden="true">
+                                            <span>6.0%</span>
+                                            <span>5.0%</span>
+                                            <span>4.0%</span>
+                                            <span>3.0%</span>
+                                            <span>2.0%</span>
+                                            <span>1.0%</span>
+                                            <span>0.0%</span>
+                                        </div>
+                                        <div class="grafico-barras">
+                                            <div class="barra" style="height: 86%;"><span>Janeiro</span></div>
+                                            <div class="barra" style="height: 80%;"><span>Fevereiro</span></div>
+                                            <div class="barra" style="height: 74%;"><span>Março</span></div>
+                                            <div class="barra" style="height: 68%;"><span>Abril</span></div>
+                                            <div class="barra" style="height: 61%;"><span>Maio</span></div>
+                                            <div class="barra" style="height: 57%;"><span>Junho</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="exportar-box">
+                                    <button class="exportar-botao" onclick="drop(this.nextElementSibling)">Exportar</button>
+                                    <nav class="exportar-menu" style="display: flex;">
+                                        <a href="./exportar.html">.xlsx</a>
+                                        <a href="./exportar.html">.csv</a>
+                                        <a href="./exportar.html">.pdf</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sub indicador-card">
+                        <button class="boxe-emcima preench-cinza" onclick="drop_inline(this.nextElementSibling), inverte_seta(this)">
+                            <h3>Indicador 2</h3>
+                            <span class="seta">▼</span>
+                        </button>
+                        <div class="boxe-embaixo indicador-fechado" style="display: none;">
+                            <p>Espaço reservado para um segundo indicador com seus dados e evolução temporal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/dropdown.js" defer></script>
+        <script src="./js/acessibilidade.js" defer></script>
+    </body>
+</html>

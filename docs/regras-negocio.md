@@ -1,17 +1,21 @@
 ### Regras de Negócio
 #### Estrutura de Dados e Hierarquia
+# Regras de Negócio
+## Estrutura de Dados e Hierarquia
 Essas regras garantem a consistência e a integridade da árvore de informações do sistema.
 - RN01 – Vinculação Obrigatória de Problemas: Todo problema público cadastrado no sistema deve, obrigatoriamente, estar associado a exatamente um dos 23 Compromissos Decenais da criança e do adolescente (Derivado de: RF01).
 - RN02 – Rigidez Hierárquica: O sistema deve impor e validar a árvore de dependências de quatro níveis. Não pode existir uma Tarefa sem uma Linha de Ação pai, que por sua vez necessita de um Objetivo pai (Derivado de: RF02).
 - RN03 – Atribuição de Responsabilidades: Toda Ação cadastrada deve conter obrigatoriamente a definição de um (e apenas um) Responsável Principal, permitindo zero ou mais Colaboradores (Derivado de: RF19).
 
 #### Monitoramento, Cálculo e Estados
+## Monitoramento, Cálculo e Estados
 Regras que gerenciam a lógica de progresso e as atualizações.
 - RN04 – Estados Permitidos para Tarefas/Indicadores: O ciclo de vida de monitoramento de uma tarefa ou indicador deve aceitar estritamente um dos três status: Não Iniciada, Em Andamento ou Concluída (Derivado de: RF03).
 - RN05 – Cálculo e Gráficos por Ano: A filtragem e a renderização dos gráficos de progresso dos indicadores devem ser separadas por ano (Derivado de: RF17).
 - RN06 – Identidade Visual: O sistema deve aplicar uma identidade visual distinta (como cores, ícones ou tags) baseada no dado "Tipo do Indicador" para fins de diferenciação na interface (Derivado de: RF18).
 
 #### Controle de Acesso e Permissão
+## Controle de Acesso e Permissão
 Regras que restringem quem pode ler, escrever ou alterar o estado do sistema.
 - RN07 – Camadas Mínimas de Acesso: O sistema deve validar o escopo de atuação de pelo menos três perfis distintos de usuários: SEDEF / Administrador, responsável por gerenciar permissões e dados estruturais.
 Conselho Estadual / Secretarias: Usuários operacionais responsáveis por alimentar dados e atualizar tarefas.
@@ -21,6 +25,7 @@ Público Geral: Acesso restrito de leitura (Visualização pública, sem necessi
 - RN09 – Proteção contra Alterações Anônimas: Qualquer inserção ou alteração de dados via interface gráfica ou via carga de planilhas exige autenticação e nível de permissão adequado (Derivado de: RF11, RF12, RF21 e RF22).
 
 #### Segurança, Auditoria e Logs
+## Segurança, Auditoria e Logs
 Restrições de segurança e conformidade de dados.
 - RN10 – Logs e Registros: Qualquer ação que altere o estado do sistema (criação, edição, exclusão ou mudança de status) deve gerar um registro de log imutável contendo: ID do Usuário, Data/Hora da ação, e o dado antes e depois da alteração (Derivado de: RF13).
 - RN11 – Histórico de Evolução: O sistema deve registrar cronologicamente cada atualização de progresso de uma tarefa, criando um histórico visualizável para o usuário, sem sobrescrever o registro passado (Derivado de: RF08).
@@ -28,6 +33,7 @@ Restrições de segurança e conformidade de dados.
 - RN13 – Autenticação: Todas as requisições para endpoints protegidos da API devem exigir e validar um Token JWT válido e não expirado (Derivado de: RF23).
 
 #### Entrada e Saída de Dados (Filtros, Carga e Exportação)
+## Entrada e Saída de Dados (Filtros, Carga e Exportação)
 Regras para manipulação de arquivos e dados em massa.
 - RN14 – Consistência de Planilhas: O carregamento de dados em massa por planilhas (Excel/CSV) deve passar por uma esteira de validação antes do armazenamento. Se houver falha de tipo ou hierarquia em uma linha, a operação deve ser abortada para garantir a integridade dos dados (Derivado de: RF21 e RNF04).
 - RN15 – Escopo de Exportação: Os arquivos gerados em Excel, CSV ou PDF devem conter exatamente o mesmo subconjunto de dados resultante dos filtros aplicados pelo usuário na tela no momento do clique (Derivado de: RF05 e RF06).
