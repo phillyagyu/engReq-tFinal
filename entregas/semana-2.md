@@ -77,7 +77,7 @@ Regras para manipulação de arquivos e dados em massa.
 
 ###  Backlog Inicial e Critérios de Aceitação
 
-Nesta seção, as User Stories são desdobradas em critérios de aceitação objetivos, mapeando as Regras de Negócio (RN) para garantir a conformidade e os cenários de teste corretos.
+Nesta seção, as User Stories são desdobradas em critérios de aceitação objetivos, mapeando as Regras de Negócio (RN) para garantir a conformidade e os cenários de teste corretos. Também foi estruturado na aba Projects do GitHub.
 
 #### Segmento 1: Estrutura de Dados e Hierarquia
 
