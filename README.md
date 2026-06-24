@@ -1,6 +1,6 @@
 # Trabalho da disciplina CI1162 - Engenharia de Requisitos 2026/1 - UFPR
 
-## Nome do Projeto
+## Nome do Projeto: "Monitoramento do Plano Decenal da Criança e Adolescente"
 
 ## Integrantes do Grupo
 - Eduarda de Aguiar Freitas - GRR20211799
@@ -58,4 +58,21 @@ engReq-tFinal/
 
 ## Instruções para acessar a documentação
 
+Para visualizar a documentação completa e o progresso do projeto, siga as instruções abaixo:
+
+* **Documentação Técnica e Requisitos**: Todos os arquivos relacionados a Casos de Uso, Regras de Negócio, Histórias de Usuário, Regras de Negócio e Requisitos (RF/RNF) estão organizados cronologicamente dentro da pasta `docs/` e nas pastas de entregas semanais.
+* **Matriz de Rastreabilidade**: O mapeamento consolidado que cruza os requisitos, as User Stories (US), as regras de negócio (RN) e as telas do protótipo está disponível no arquivo `matriz-rastreabilidade.md` dentro da pasta `docs/`.
+* **Protótipo Interativo (Deploy)**: 
+    * O protótipo navegável baseado em HTML/CSS/JS pode ser acessado diretamente pelo link do [GitHub Pages](https://phillyagyu.github.io/engReq-tFinal/) do repositório.
+    * Para execução local, os arquivos de interface estão localizados na pasta `prototipo/telas/`. Recomenda-se abrir o arquivo `index.html` ou `login.html` dentro do diretório `prototipo/telas/`
+
+---
+
 ## Resumo das principais versões entregues
+
+O desenvolvimento do projeto `"Monitoramento do Plano Decenal da Criança e Adolescente"` está estruturado de forma incremental, com o histórico de referências e evoluções mapeado nas seguintes entregas:
+
+* **Configuração de Ambiente e Estrutura Inicial**: Organização das pastas base do projeto (`docs/`, `entregas/`, `prototipo/`) e padronização do ambiente de desenvolvimento.
+* **Estrutura inicial do projeto (Semana 1)**: Estruturação e identificação dos requisitos do projeto em `requisitos.md`, `semana-1.md`.
+* **Mapeamento de Requisitos e Histórias de Usuário (Semana 2)**: Estruturação, categorização e refinamento das User Stories (US), associando-as diretamente às Regras de Negócio (RN) e requisitos de software através dos arquivos `historias-usuario.md`, `regras-negocio.md`, `semana-2.md`.
+* **Protótipo e Rastreabilidade (Semana 3)**: Desenvolvimento das telas da interface do sistema ao decorrer do processo todo mas finalizado em `prototipo/telas/`. Consolidação da **Matriz de Rastreabilidade** em `matriz-rastreabilidade.md`, garantindo o vínculo e a conformidade entre o que foi documentado e o protótipo funcional.
