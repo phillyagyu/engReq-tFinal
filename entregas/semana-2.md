@@ -74,3 +74,113 @@ Regras para manipulação de arquivos e dados em massa.
 - RN14 – Consistência de Planilhas: O carregamento de dados em massa por planilhas (Excel/CSV) deve passar por uma esteira de validação antes do armazenamento. Se houver falha de tipo ou hierarquia em uma linha, a operação deve ser abortada para garantir a integridade dos dados (Derivado de: RF21 e RNF04).
 - RN15 – Escopo de Exportação: Os arquivos gerados em Excel, CSV ou PDF devem conter exatamente o mesmo subconjunto de dados resultante dos filtros aplicados pelo usuário na tela no momento do clique (Derivado de: RF05 e RF06).
 - RN16 – Retenção Mínima: O banco de dados do sistema deve ser modelado e dimensionado para reter e permitir a consulta de dados históricos de monitoramento por um período mínimo de 10 anos, sem degradação de performance (Derivado de: RNF03 e RNF07).
+
+###  Backlog Inicial e Critérios de Aceitação
+
+Nesta seção, as User Stories são desdobradas em critérios de aceitação objetivos, mapeando as Regras de Negócio (RN) para garantir a conformidade e os cenários de teste corretos.
+
+#### Segmento 1: Estrutura de Dados e Hierarquia
+
+##### US01 – Visualizar Problemas Públicos e Vínculos
+* **Critérios de Aceitação:**
+  - [ ] A interface pública deve exibir a listagem completa de problemas públicos cadastrados.
+  - [ ] Ao salvar ou exibir um problema público, o sistema deve validar e exibir obrigatoriamente a sua vinculação a exatamente um dos 23 Compromissos Decenais da criança e do adolescente (Conformidade com **RN01**).
+  - [ ] Se o problema não estiver associado a um compromisso, o sistema deve impedir o salvamento e retornar um alerta em tela.
+
+##### US02 – Navegar pela Estrutura Hierárquica do Plano
+* **Critérios de Aceitação:**
+  - [ ] O usuário deve conseguir expandir e colapsar os níveis visualmente no formato de árvore ou navegação aninhada.
+  - [ ] O sistema deve impedir e rejeitar a criação de qualquer Tarefa que não possua uma Linha de Ação pai (Conformidade com **RN02**).
+  - [ ] O sistema deve impedir e rejeitar a criação de qualquer Linha de Ação que não possua um Objetivo pai (Conformidade com **RN02**).
+
+##### US12 – Consultar Responsáveis pelas Ações
+* **Critérios de Aceitação:**
+  - [ ] Cada ação detalhada em tela deve expor claramente quem é o seu Responsável Principal (obrigatório e único) (Conformidade com **RN03**).
+  - [ ] A interface deve permitir listar uma quantidade variável (zero ou mais) de Colaboradores secundários na mesma ação (Conformidade com **RN03**).
+
+---
+
+#### Segmento 2: Monitoramento, Cálculo e Estados
+
+##### US03 – Monitorar Tarefas e Indicadores
+* **Critérios de Aceitação:**
+  - [ ] O painel de monitoramento deve exibir o status atual de cada tarefa ou indicador utilizando tags visuais explícitas.
+  - [ ] O sistema deve permitir estritamente a atribuição e transição entre três estados: `Não Iniciada`, `Em Andamento` ou `Concluída` (Conformidade com **RN04**).
+
+##### US10 – Filtrar Gráficos por Ano
+* **Critérios de Aceitação:**
+  - [ ] A tela de indicadores deve disponibilizar um componente de seleção de ano (ex: dropdown/select).
+  - [ ] Ao alterar o ano selecionado, todos os gráficos de progresso do painel devem ser recalculados e renderizados isoladamente com os dados daquele período específico (Conformidade com **RN05**).
+
+##### US11 – Identificação Visual por Tipo de Indicador
+* **Critérios de Aceitação:**
+  - [ ] O sistema deve injetar componentes visuais distintos (como cores, ícones ou marcadores específicos) baseados no parâmetro "Tipo do Indicador" (Conformidade com **RN06**).
+
+---
+
+#### Segmento 3: Controle de Acesso e Permissão
+
+##### US14 – Utilizar Diferentes Perfis de Usuário
+* **Critérios de Aceitação:**
+  - [ ] O sistema deve validar em tempo de execução o perfil do usuário logado e restringir o acesso às funcionalidades.
+  - [ ] O perfil `SEDEF / Administrador` deve ter acesso completo de escrita, gerenciamento e visualização estrutural (Conformidade com **RN07**).
+  - [ ] O perfil `Conselho Estadual / Secretarias` deve possuir acesso restrito à alimentação de dados operacionais e atualização de tarefas (Conformidade com **RN07**).
+  - [ ] O `Público Geral` deve acessar o sistema em modo estrito de leitura, sem telas ou botões de edição visíveis (Conformidade com **RN07**).
+
+##### US15 – Gerenciar Permissões de Usuários
+* **Critérios de Aceitação:**
+  - [ ] O painel autônomo de gerenciamento de permissões deve estar disponível exclusivamente para usuários autenticados como `SEDEF` (Conformidade com **RN08**).
+  - [ ] Se um usuário sem o perfil autorizado tentar acessar o endpoint ou a tela de permissões, o sistema deve bloquear o acesso e retornar um erro HTTP 403 Forbidden.
+
+##### US13 – Realizar Autenticação (Login)
+* **Critérios de Aceitação:**
+  - [ ] O formulário de login deve exigir e-mail/usuário e senha válidos.
+  - [ ] Qualquer operação de alteração (inserção via tela ou por carga de arquivos) deve verificar se o usuário está autenticado antes de processar a gravação (Conformidade com **RN09**).
+
+---
+
+#### Segmento 4: Segurança, Auditoria e Logs
+
+##### US19 – Registrar Auditoria das Alterações (Logs)
+* **Critérios de Aceitação:**
+  - [ ] Cada requisição de criação, edição, exclusão ou alteração de status deve disparar silenciosamente uma rotina de log de auditoria no backend.
+  - [ ] O registro do log gravado em banco de dados deve ser imutável e conter obrigatoriamente: ID do Usuário, Data/Hora exata e o payload do dado no estado anterior e posterior à mudança (Conformidade com **RN10**).
+
+##### US07 – Consultar Histórico de Atualizações de uma Tarefa
+* **Critérios de Aceitação:**
+  - [ ] A tela de detalhes de uma tarefa deve renderizar uma linha do tempo cronológica com o histórico de notas de progresso inseridas.
+  - [ ] Uma nova atualização de status não pode sobrescrever ou deletar o registro histórico passado do banco de dados (Conformidade com **RN11**).
+
+##### US06 – Visualizar Timestamp da Última Atualização
+* **Critérios de Aceitação:**
+  - [ ] Qualquer tela ou painel de exibição de dados de monitoramento deve exibir em destaque a data e o horário da última modificação gravada para aquele conjunto (Conformidade com **RN12**).
+
+##### US21 – Proteger Sessões com Tokens Seguros
+* **Critérios de Aceitação:**
+  - [ ] Após o login bem-sucedido, o servidor deve emitir um Token JWT assinado.
+  - [ ] Toda requisição para rotas privadas ou protegidas da API deve injetar o Token no cabeçalho `Authorization: Bearer <token>` e o servidor deve rejeitar tokens expirados ou malformados (Conformidade com **RN13**).
+
+---
+
+#### Segmento 5: Entrada e Saída de Dados (Filtros, Carga e Exportação)
+
+##### US18 – Importar Dados em Massa por Planilhas
+* **Critérios de Aceitação:**
+  - [ ] O componente de upload deve aceitar arquivos nos formatos `.xlsx`, `.xls` ou `.csv`.
+  - [ ] O sistema deve rodar uma rotina de validação prévia de tipo de dados e árvore de hierarquia de todas as linhas antes de salvar no banco de dados.
+  - [ ] Se uma única linha da planilha contiver erros de tipagem ou quebra de regras, toda a operação de inserção deve ser abortada (rollback), sem salvar dados parciais (Conformidade com **RN14**).
+
+##### US08 – Exportar Dados Filtrados
+* **Critérios de Aceitação:**
+  - [ ] O usuário deve conseguir clicar nos botões de exportação para Excel, CSV ou PDF a partir das telas de listagem.
+  - [ ] O documento gerado para download deve conter exatamente o mesmo subconjunto e volume de registros filtrados na tela pelo usuário no exato momento da exportação (Conformidade com **RN15**).
+
+---
+
+#### Segmento 6: Acessibilidade e Experiência do Usuário
+
+##### US20 – Utilizar Recursos de Acessibilidade
+* **Critérios de Aceitação:**
+  - [ ] A interface deve disponibilizar um botão global visível para ativação do modo de `Alto Contraste`.
+  - [ ] Ao ativar o modo, a folha de estilos (CSS) deve ser alterada instantaneamente atendendo aos critérios de legibilidade para acessibilidade visual.
+  - [ ] A interface deve permitir o redimensionamento do texto sem quebrar o layout das tabelas e painéis.
