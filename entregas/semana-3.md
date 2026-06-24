@@ -13,7 +13,7 @@ O protótipo inicial foi desenvolvido utilizando tecnologias web estáticas (HTM
 
 #### Como executar o protótipo localmente:
 1. Navegue até a pasta `prototipo/telas/`.
-2. Abra o arquivo principal de entrada `index.html` ou `login.html` diretamente em qualquer navegador web de sua preferência.
+2. Abra o arquivo principal de entrada `sistema.html` ou `login.html` diretamente em qualquer navegador web de sua preferência.
 
 ---
 
